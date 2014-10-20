@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BNRHypnosisViewController.h"
+#import "BNRReminderViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     BNRHypnosisViewController *hvc = [[BNRHypnosisViewController alloc] init];
     
-    self.window.rootViewController = hvc;
+    // This will get a pointer to an object that represents the app bundle
+    NSBundle *appBundle = [NSBundle mainBundle];
+    
+    // Look in the appBundle for the file BNDReminderViewController.xib
+    BNRReminderViewController *rvc = [[BNRReminderViewController alloc] initWithNibName:@"BNRReminderViewController" bundle:appBundle];
+    
+    self.window.rootViewController = rvc;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
