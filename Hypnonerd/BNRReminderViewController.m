@@ -16,6 +16,18 @@
 
 @implementation BNRReminderViewController
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        self.tabBarItem.title = @"Reminder";
+        UIImage *image = [UIImage imageNamed:@"Time.png"];
+        self.tabBarItem.image = image;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

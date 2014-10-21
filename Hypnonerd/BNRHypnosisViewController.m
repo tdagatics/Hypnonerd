@@ -15,6 +15,25 @@
 
 @implementation BNRHypnosisViewController
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        // Set the tab bar item's table
+        self.tabBarItem.title = @"Hypnotize";
+        
+        // Create a UIImage from a file
+        // This will use Hypno@2.png on retina display devices
+        UIImage *image = [UIImage imageNamed:@"Hypno.png"];
+        
+        // Put that image on the tab bar item
+        self.tabBarItem.image = image;
+
+    }
+    return self;
+}
+
 - (void) loadView {
     [super loadView];
     CGRect frame = [UIScreen mainScreen].bounds;

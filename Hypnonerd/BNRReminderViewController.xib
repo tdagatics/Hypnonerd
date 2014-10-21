@@ -4,24 +4,32 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRReminderViewController">
+            <connections>
+                <outlet property="datePicker" destination="NZD-jO-EwP" id="I5O-aQ-zsm"/>
+                <outlet property="view" destination="Rua-g2-zIJ" id="2e9-P2-m9U"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Rua-g2-zIJ">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sx-6l-cwS">
-                    <rect key="frame" x="8" y="314" width="584" height="42"/>
-                    <state key="normal" title="Remind Me!">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NZD-jO-EwP">
                     <rect key="frame" x="0.0" y="99" width="600" height="162"/>
                     <date key="date" timeIntervalSinceReferenceDate="435537621.25616401">
                         <!--2014-10-20 22:40:21 +0000-->
                     </date>
                 </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sx-6l-cwS">
+                    <rect key="frame" x="8" y="314" width="584" height="42"/>
+                    <state key="normal" title="Remind Me!">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addReminder:" destination="-1" eventType="touchUpInside" id="gOp-Lf-DJR"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="315" y="310"/>
