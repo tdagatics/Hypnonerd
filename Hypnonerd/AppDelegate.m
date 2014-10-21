@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BNRHypnosisViewController.h"
 #import "BNRReminderViewController.h"
+#import "BNRQuizViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,15 +22,12 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     BNRHypnosisViewController *hvc = [[BNRHypnosisViewController alloc] init];
+    BNRQuizViewController *qvc = [[BNRQuizViewController alloc] init];
     
-    // This will get a pointer to an object that represents the app bundle
-    NSBundle *appBundle = [NSBundle mainBundle];
-    
-    // Look in the appBundle for the file BNDReminderViewController.xib
-    BNRReminderViewController *rvc = [[BNRReminderViewController alloc] initWithNibName:@"BNRReminderViewController" bundle:appBundle];
+    BNRReminderViewController *rvc = [[BNRReminderViewController alloc] init];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[hvc, rvc];
+    tabBarController.viewControllers = @[hvc, rvc, qvc];
     
     self.window.rootViewController = tabBarController;
     

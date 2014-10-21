@@ -16,23 +16,30 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NZD-jO-EwP">
-                    <rect key="frame" x="0.0" y="99" width="600" height="162"/>
+                    <rect key="frame" x="17" y="138" width="279" height="162"/>
                     <date key="date" timeIntervalSinceReferenceDate="435537621.25616401">
                         <!--2014-10-20 22:40:21 +0000-->
                     </date>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="17" y="168" width="279" height="162"/>
+                    </variation>
                 </datePicker>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sx-6l-cwS">
-                    <rect key="frame" x="8" y="314" width="584" height="42"/>
+                    <rect key="frame" x="-136" y="338" width="584" height="42"/>
                     <state key="normal" title="Remind Me!">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="-136" y="367" width="584" height="42"/>
+                    </variation>
                     <connections>
                         <action selector="addReminder:" destination="-1" eventType="touchUpInside" id="gOp-Lf-DJR"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="315" y="310"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="343" y="320"/>
         </view>
     </objects>
 </document>

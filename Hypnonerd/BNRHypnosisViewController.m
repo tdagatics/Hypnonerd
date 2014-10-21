@@ -38,6 +38,7 @@
     [super loadView];
     CGRect frame = [UIScreen mainScreen].bounds;
     BNRHypnosisView *backgroundView = [[BNRHypnosisView alloc] initWithFrame:frame];
+    NSLog(@"BNRHypnosisViewController load its view.");
     // Set is as *the* view of this view controller
     self.view = backgroundView;
 }
